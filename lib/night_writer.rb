@@ -4,6 +4,23 @@ class FileReader
     File.read(filename)
   end
 end
+#Just for lower case letters...
+## Changing to Braille:
+### open a message file
+###change each char into Braille (remember it's 6 cells (2x3))
+###writing file...Braille message
+###remember lines are 80 chars max
+###don't forget to close the file
+### screen message about number of chars
+
+##Changing Braille to message:
+###open a Braille file
+###read lines (will this go backwards?)
+###translate to chars
+###open message file
+###write in message file
+###don't forget to close the file
+###screen message about converting (will this need to be divided by 6?)
 
 class NightWriter
   attr_reader :file_reader
