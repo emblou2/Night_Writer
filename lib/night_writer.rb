@@ -1,42 +1,27 @@
-class FileReader
-  def read
-    filename = ARGV[0]
-    File.read(filename)
-  end
-end
-#Just for lower case letters...
-## Changing to Braille:
-### open a message file
-###change each char into Braille (remember it's 6 cells (2x3))
-###writing file...Braille message
-###remember lines are 80 chars max
-###don't forget to close the file
-### screen message about number of chars
-
-##Changing Braille to message:
-###open a Braille file
-###read lines (will this go backwards?)
-###translate to chars
-###open message file
-###write in message file
-###don't forget to close the file
-###screen message about converting (will this need to be divided by 6?)
+require_relative 'file_reader'
+require_relative 'file_writer'
 
 class NightWriter
   attr_reader :file_reader
+  attr_writer :file_writer
 
   def initialize
     @reader = FileReader.new
+    @writer = FileWriter.new
   end
 
   def encode_file_to_braille
     # I wouldn't worry about testing this method
     # unless you get everything else done
-    plain = reader.read
+    plain = @reader.read
     braille = encode_to_braille(plain)
+    @writer.write(braille)
   end
 
+
+
   def encode_to_braille(input)
+    input * 3
     # you've taken in an INPUT string
     # do the magic
     # send out an OUTPUT string
