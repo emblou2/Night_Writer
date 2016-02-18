@@ -12,7 +12,6 @@ class NightWrite
 
   def change_topline_to_braille_piece
     n = 1                                                                       # => 1
-    #text
     text.each {|l|                                                              # => ["t", "e", "s", "t", "i", "n", "g"]
       if l ==('a')||l ==('b')||l ==('e')||l ==('h')||l ==('k')||l ==('l')||     # => false, true, false, false, false, false, false
         l ==('o')||l ==('r')||l ==('u')||l ==('v')||l ==('z')                   # => false, true, false, false, false, false, false
