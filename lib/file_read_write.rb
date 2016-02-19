@@ -3,7 +3,7 @@
 class FileReadWrite
   def read
     filename = ARGV[0]
-    File.read(filename).chomp #needs to be -1
+    File.read(filename).chomp
   end
 
   def write(output)
