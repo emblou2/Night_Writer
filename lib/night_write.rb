@@ -17,27 +17,27 @@ class NightWrite
   end
 
   def output_three_lines(braille_array)
-    o = ""
+    output = ""
     braille_array.each do | array |
-      o << array[0]
+      output << array[0]
     end
     output << "\n"
     braille_array.each do | array |
-      o << array[1]
+      output << array[1]
     end
     output << "\n"
     braille_array.each do | array |
-      o << array[2]
+      output << array[2]
     end
-    o
+    output
   end
 
 
 end
 
-frw = FileReadWrite.new
-input = frw.read
+#frw = FileReadWrite.new
+#input = frw.read
 #frw.write(input)
-nw = NightWrite.new(input)
-output = nw.translate_to_braille
-frw.write(output)
+#nw = NightWrite.new(input)
+#output = nw.translate_to_braille
+#frw.write(output)
